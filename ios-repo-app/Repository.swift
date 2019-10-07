@@ -6,7 +6,7 @@
 //  Copyright © 2019 Cascadia College. All rights reserved.
 //
 import Foundation
-// TODO : Add Repo Protocol to allow for a MockAPIRepo
+
 protocol APIRepository {
     associatedtype T
     
@@ -17,9 +17,8 @@ protocol APIRepository {
     func delete( withId id:Int )
 }
 
-class Repository:APIRepository {
+class Repository<T:Codable>:APIRepository {
     
-    typealias T = User
     var path: String
     init(withPath path:String){
         self.path = path

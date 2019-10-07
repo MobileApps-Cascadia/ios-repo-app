@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var resultInfo: UILabel!
     
-    let path = "http://216.186.69.45/services/device/users"
+    let userPath = "http://216.186.69.45/services/device/users"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
 
     @IBAction func saveToAPI(_ sender: Any) {
         //create a Repository object needed to invoke the API's create method
-        let userRepo = Repository(withPath: path)
+        let userRepo = Repository<User>(withPath: userPath)
         
         let newUser = User()
         newUser.FirstName = firstName.text
