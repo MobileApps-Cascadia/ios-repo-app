@@ -15,14 +15,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var sid: UITextField!
     
     @IBOutlet weak var resultInfo: UILabel!
+    
+    let path = "http://216.186.69.45/services/device/users"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
     @IBAction func saveToAPI(_ sender: Any) {
-        //TODO: create a Repository object needed to invoke the API's create method
-        let userRepo = 
+        //create a Repository object needed to invoke the API's create method
+        let userRepo = Repository(withPath: path)
         
         let newUser = User()
         newUser.FirstName = firstName.text
