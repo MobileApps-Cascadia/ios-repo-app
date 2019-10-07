@@ -285,10 +285,10 @@
             </objects>
             <point key="canvasLocation" x="1559.4202898550725" y="1060.7142857142858"/>
         </scene>
-        <!--Devices-->
+        <!--Device-->
         <scene sceneID="gfr-eC-wDn">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="15R-va-ntw" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="15R-va-ntw" userLabel="Device" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Devices" id="6sQ-EJ-XuG"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gKL-VP-Bjf">
