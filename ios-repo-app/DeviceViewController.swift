@@ -30,7 +30,7 @@ class DeviceViewController: UIViewController {
         
         let newDevice = Device()
         newDevice.DeviceNum = deviceNum.text
-        newDevice.DeviceType = deviceType.text
+        newDevice.DeviceType = DeviceType.withLabel(deviceType.text!)
         
         deviceRepo.create(a: newDevice)  { device in
             if let id = device?.DeviceID, let num = device?.DeviceNum, let type = device?.DeviceType {
