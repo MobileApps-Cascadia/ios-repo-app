@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F351115234C005C00CF1621 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F351114234C005C00CF1621 /* User.swift */; };
+		3F351117234C030600CF1621 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F351116234C030600CF1621 /* Device.swift */; };
+		3F35111B234C040A00CF1621 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F35111A234C040A00CF1621 /* DeviceViewController.swift */; };
 		D12B603923496A6B00D612C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12B603823496A6B00D612C7 /* AppDelegate.swift */; };
 		D12B603B23496A6B00D612C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12B603A23496A6B00D612C7 /* ViewController.swift */; };
 		D12B603E23496A6B00D612C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D12B603C23496A6B00D612C7 /* Main.storyboard */; };
 		D12B604023496A6D00D612C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D12B603F23496A6D00D612C7 /* Assets.xcassets */; };
 		D12B604323496A6D00D612C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D12B604123496A6D00D612C7 /* LaunchScreen.storyboard */; };
 		D12B604B23496AC000D612C7 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12B604A23496AC000D612C7 /* Repository.swift */; };
-		D12B604D23496B4300D612C7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12B604C23496B4300D612C7 /* User.swift */; };
-		D12B604F23496BF300D612C7 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12B604E23496BF300D612C7 /* Device.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F351114234C005C00CF1621 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3F351116234C030600CF1621 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		3F35111A234C040A00CF1621 /* DeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
 		D12B603523496A6B00D612C7 /* ios-repo-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-repo-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D12B603823496A6B00D612C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D12B603A23496A6B00D612C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,8 +30,6 @@
 		D12B604223496A6D00D612C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D12B604423496A6D00D612C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D12B604A23496AC000D612C7 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		D12B604C23496B4300D612C7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		D12B604E23496BF300D612C7 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,18 +69,11 @@
 				D12B604123496A6D00D612C7 /* LaunchScreen.storyboard */,
 				D12B604423496A6D00D612C7 /* Info.plist */,
 				D12B604A23496AC000D612C7 /* Repository.swift */,
-				D12B605023496C1000D612C7 /* Model */,
+				3F351114234C005C00CF1621 /* User.swift */,
+				3F351116234C030600CF1621 /* Device.swift */,
+				3F35111A234C040A00CF1621 /* DeviceViewController.swift */,
 			);
 			path = "ios-repo-app";
-			sourceTree = "<group>";
-		};
-		D12B605023496C1000D612C7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				D12B604C23496B4300D612C7 /* User.swift */,
-				D12B604E23496BF300D612C7 /* Device.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,11 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D12B604D23496B4300D612C7 /* User.swift in Sources */,
+				3F351115234C005C00CF1621 /* User.swift in Sources */,
 				D12B604B23496AC000D612C7 /* Repository.swift in Sources */,
+				3F35111B234C040A00CF1621 /* DeviceViewController.swift in Sources */,
 				D12B603B23496A6B00D612C7 /* ViewController.swift in Sources */,
-				D12B604F23496BF300D612C7 /* Device.swift in Sources */,
 				D12B603923496A6B00D612C7 /* AppDelegate.swift in Sources */,
+				3F351117234C030600CF1621 /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
