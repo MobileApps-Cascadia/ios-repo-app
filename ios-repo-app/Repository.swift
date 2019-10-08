@@ -17,6 +17,30 @@ protocol APIRepository {
     func delete( withId id:Int )
 }
 
+class MockRepository<T:Codable>:APIRepository {
+    func fetch(withCompletion completion: @escaping ([T]?) -> Void) {
+        <#code#>
+    }
+    
+    func fetch(withId id: Int, withCompletion completion: @escaping (T?) -> Void) {
+        <#code#>
+    }
+    
+    func create(a: T, withCompletion completion: @escaping (T?) -> Void) {
+        <#code#>
+    }
+    
+    func update(withId id: Int, a: T) {
+        <#code#>
+    }
+    
+    func delete(withId id: Int) {
+        <#code#>
+    }
+    
+    
+}
+
 class Repository<T:Codable>:APIRepository {
     
     var path: String
