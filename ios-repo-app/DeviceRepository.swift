@@ -1,45 +1,39 @@
 //
-//  Repository.swift
+//  DeviceRepository.swift
 //  ios-repo-app
 //
-//  Created by Brian Bansenauer on 10/5/19.
+//  Created by juanita aguilar on 10/11/19.
 //  Copyright © 2019 Cascadia College. All rights reserved.
 //
+
 import Foundation
-// TODO : Add Repo Protocol to allow for a MockAPIRepo
-protocol APIRepository {
-    associatedtype T
-     func fetch(withCompletion completion: @escaping ([T]?) -> Void)
-     func fetch(withId id: Int, withCompletion completion: @escaping (T?) -> Void)
-     func create( a:T, withCompletion completion: @escaping (T?) -> Void )
-    func update( withId id:Int, a:T )
-    func delete( withId id:Int )
-    
-}
 // TODO : Use Generics and typeAlias to make the Repository class more general
-class Repository:APIRepository {
+class DeviceRepository:APIRepository {
+  
+    
    
-    typealias T = User
+    typealias T = Device
+    
     var path: String
     
     init(withPath path:String){
         self.path = path
     }
     
-    func fetch(withCompletion completion: @escaping ([User]?) -> Void) { }
+    func fetch(withCompletion completion: @escaping ([Device]?) -> Void) { }
     
-    func fetch(withId id: Int, withCompletion completion: @escaping (User?) -> Void) {
+    func fetch(withId id: Int, withCompletion completion: @escaping (Device?) -> Void) {
         let URLstring = path + "\(id)"
         if let url = URL.init(string: URLstring){
             let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
-                if let user = try? JSONDecoder().decode(User.self, from: data!){
-                    completion (user)
+                if let device = try? JSONDecoder().decode(Device.self, from: data!){
+                    completion (device)
                 }
             }
             task.resume()
         }
     }
-    func create( a:User, withCompletion completion: @escaping (User?) -> Void ) {
+    func create( a:Device, withCompletion completion: @escaping (Device?) -> Void ) {
         let url = URL.init(string: path)
         var urlRequest = URLRequest.init(url: url!)
         urlRequest.httpMethod = "POST"
@@ -47,12 +41,12 @@ class Repository:APIRepository {
         
         let task = URLSession.shared.dataTask(with: urlRequest) {
             (data, response, error) in
-            let user = try? JSONDecoder().decode(User.self, from: data!)
-            completion (user)
+            let device = try? JSONDecoder().decode(Device.self, from: data!)
+            completion (device)
         }
         task.resume()
     }
-    func update( withId id:Int, a:User ) {
+    func update( withId id:Int, a:Device ) {
         if let url = URL.init(string: path + "\(id)"){
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = "PUT"
@@ -70,4 +64,3 @@ class Repository:APIRepository {
         }
     }
 }
-

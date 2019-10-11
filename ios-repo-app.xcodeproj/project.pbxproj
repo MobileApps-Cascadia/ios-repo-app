@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8FA89B72351203C00537062 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA89B62351203C00537062 /* DeviceViewController.swift */; };
+		A8FA89B923512ADC00537062 /* DeviceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA89B823512ADC00537062 /* DeviceRepository.swift */; };
 		D12B603923496A6B00D612C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12B603823496A6B00D612C7 /* AppDelegate.swift */; };
 		D12B603B23496A6B00D612C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12B603A23496A6B00D612C7 /* ViewController.swift */; };
 		D12B603E23496A6B00D612C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D12B603C23496A6B00D612C7 /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A8FA89B62351203C00537062 /* DeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
+		A8FA89B823512ADC00537062 /* DeviceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRepository.swift; sourceTree = "<group>"; };
 		D12B603523496A6B00D612C7 /* ios-repo-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-repo-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D12B603823496A6B00D612C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D12B603A23496A6B00D612C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 				D12B604123496A6D00D612C7 /* LaunchScreen.storyboard */,
 				D12B604423496A6D00D612C7 /* Info.plist */,
 				D12B604A23496AC000D612C7 /* Repository.swift */,
+				A8FA89B823512ADC00537062 /* DeviceRepository.swift */,
+				A8FA89B62351203C00537062 /* DeviceViewController.swift */,
 				D12B605023496C1000D612C7 /* Model */,
 			);
 			path = "ios-repo-app";
@@ -153,7 +159,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D12B604D23496B4300D612C7 /* User.swift in Sources */,
+				A8FA89B923512ADC00537062 /* DeviceRepository.swift in Sources */,
 				D12B604B23496AC000D612C7 /* Repository.swift in Sources */,
+				A8FA89B72351203C00537062 /* DeviceViewController.swift in Sources */,
 				D12B603B23496A6B00D612C7 /* ViewController.swift in Sources */,
 				D12B604F23496BF300D612C7 /* Device.swift in Sources */,
 				D12B603923496A6B00D612C7 /* AppDelegate.swift in Sources */,

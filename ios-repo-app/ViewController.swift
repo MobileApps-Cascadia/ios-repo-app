@@ -22,7 +22,7 @@ class ViewController: UIViewController {
 
     @IBAction func saveToAPI(_ sender: Any) {
         //TODO: create a Repository object needed to invoke the API's create method at http://216.186.69.45/services/device/users/
-        let userRepo = 
+        let userRepo = Repository(withPath: "http://216.186.69.45/services/device/users/")
         
         let newUser = User()
         newUser.FirstName = firstName.text
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         
         userRepo.create(a: newUser)  { (user) in
             if let id = user?.UserID, let first = user?.FirstName, let last = user?.LastName {
-                self.resultInfo.text = "Successfully create user \(first) \(last) with id \(id)"
+               self.resultInfo.text = "Successfully create user \(first) \(last) with id \(id)"
             }
         }
     }
