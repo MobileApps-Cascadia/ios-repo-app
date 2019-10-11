@@ -32,7 +32,8 @@ class ViewController: UIViewController {
         
         userRepo.create(a: newUser)  { (user) in
             if let id = user?.UserID, let first = user?.FirstName, let last = user?.LastName {
-               self.resultInfo.text = "Successfully create user \(first) \(last) with id \(id)"
+               print( "Successfully create user \(first) \(last) with id \(id)")
+              // self.resultInfo.text = "Successfully create user \(first) \(last) with id \(id)"
             }
         }
     }
