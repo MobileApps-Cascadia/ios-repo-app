@@ -7,43 +7,43 @@
 //
 import Foundation
 // TODO : Add Repo Protocol to allow for a MockAPIRepo
-protocol APIRepository {
+protocol hasId {
+    var id: Int? {get set}
 
 }
+
 // TODO : Use Generics and typeAlias to make the Repository class more general
-class Repository:APIRepository {
+class MusicRepository<placeholderForType> where placeholderForType: Codable, placeholderForType: hasId {
     var path: String
     init(withPath path:String){
         self.path = path
     }
-    
-    func fetch(withCompletion completion: @escaping ([User]?) -> Void) { }
-    
-    func fetch(withId id: Int, withCompletion completion: @escaping (User?) -> Void) {
-        let URLstring = path + "\(id)"
+        
+    func fetch(withId id: Int, withCompletion completion: @escaping (placeholderForType?) -> Void) {
+        let URLstring = path + "/id/\(id)"
         if let url = URL.init(string: URLstring){
-            let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
-                if let user = try? JSONDecoder().decode(User.self, from: data!){
-                    completion (user)
-                }
-            }
+            let task = URLSession.shared.dataTask(with: url, completionHandler: {(data, response, error) in
+                if let music = try? JSONDecoder().decode(placeholderForType.self, from: data!){completion(music)}
+            })
             task.resume()
         }
     }
-    func create( a:User, withCompletion completion: @escaping (User?) -> Void ) {
-        let url = URL.init(string: path)
-        var urlRequest = URLRequest.init(url: url!)
+        
+    func create(a:placeholderForType) {
+        guard a.id != nil else {return}
+        let url = path + "/id/\(a.id!)"
+        var urlRequest = URLRequest.init(url: URL.init(string: url)!)
         urlRequest.httpMethod = "POST"
-        urlRequest.httpBody = try? JSONEncoder().encode(a)
+        urlRequest.httpBody = try? JSONEncoder().encode(a.self)
         
         let task = URLSession.shared.dataTask(with: urlRequest) {
             (data, response, error) in
-            let user = try? JSONDecoder().decode(User.self, from: data!)
-            completion (user)
+            print(String.init(data: data!, encoding: .ascii) ?? "no data")
         }
         task.resume()
     }
-    func update( withId id:Int, a:User ) {
+    
+    func update( withId id:Int, a:placeholderForType ) {
         if let url = URL.init(string: path + "\(id)"){
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = "PUT"
@@ -52,6 +52,7 @@ class Repository:APIRepository {
             task.resume()
         }
     }
+    
     func delete( withId id:Int ) {
         if let url = URL.init(string: path + "\(id)"){
             var urlRequest = URLRequest(url: url)
@@ -62,3 +63,9 @@ class Repository:APIRepository {
     }
 }
 
+class Music: Codable, hasId {
+    var id: Int?
+    var music_url: String?
+    var name: String?
+    var description: String?
+}
