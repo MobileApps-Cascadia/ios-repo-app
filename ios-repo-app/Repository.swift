@@ -35,6 +35,7 @@ class Repository<T> where T: Codable, T: HasId {
             task.resume()
         }
     }
+    
     func create(a: T, withCompletion completion: @escaping (T?) -> Void ) {
         let url = URL.init(string: path)
         var urlRequest = URLRequest.init(url: url!)
@@ -48,6 +49,7 @@ class Repository<T> where T: Codable, T: HasId {
         }
         task.resume()
     }
+    
     func update(withId id: Int, a: T ) {
         if let url = URL.init(string: path + "\(id)"){
             var urlRequest = URLRequest(url: url)
@@ -57,6 +59,7 @@ class Repository<T> where T: Codable, T: HasId {
             task.resume()
         }
     }
+    
     func delete(withId id: Int ) {
         if let url = URL.init(string: path + "\(id)"){
             var urlRequest = URLRequest(url: url)
@@ -65,5 +68,13 @@ class Repository<T> where T: Codable, T: HasId {
             task.resume()
         }
     }
+    
+}
+
+class Music: Codable, HasId {
+    var id: Int?
+    var music_url: String?
+    var name: String?
+    var description: String?
 }
 
