@@ -22,14 +22,14 @@ class ViewController: UIViewController {
 
     @IBAction func saveToAPI(_ sender: Any) {
         
-        let userRepo = Repository<Music>(withPath: "https://www.orangevalleycaa.org/api/music")
+        let musicRepo = Repository<Music>(withPath: "https://www.orangevalleycaa.org/api/music")
         
         let newMusic = Music()
         newMusic.id = 8
         newMusic.name = firstName.text
         newMusic.description = lastName.text
         
-        userRepo.create(a: newMusic)  { (music) in
+        musicRepo.create(a: newMusic)  { (music) in
             if let id = music?.id, let name = music?.name, let desc = music?.description {
                 self.resultInfo.text = "Successfully created music with id \(id) name \(name) and description \(desc)"
             }
