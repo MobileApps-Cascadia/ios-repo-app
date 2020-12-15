@@ -15,6 +15,7 @@
 		D12B604B23496AC000D612C7 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12B604A23496AC000D612C7 /* Repository.swift */; };
 		D12B604D23496B4300D612C7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12B604C23496B4300D612C7 /* User.swift */; };
 		D12B604F23496BF300D612C7 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12B604E23496BF300D612C7 /* Device.swift */; };
+		F30BBD2C2589750F0048141C /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30BBD2B2589750F0048141C /* Music.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D12B604A23496AC000D612C7 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		D12B604C23496B4300D612C7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D12B604E23496BF300D612C7 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		F30BBD2B2589750F0048141C /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				D12B604C23496B4300D612C7 /* User.swift */,
+				F30BBD2B2589750F0048141C /* Music.swift */,
 				D12B604E23496BF300D612C7 /* Device.swift */,
 			);
 			path = Model;
@@ -157,6 +160,7 @@
 				D12B603B23496A6B00D612C7 /* ViewController.swift in Sources */,
 				D12B604F23496BF300D612C7 /* Device.swift in Sources */,
 				D12B603923496A6B00D612C7 /* AppDelegate.swift in Sources */,
+				F30BBD2C2589750F0048141C /* Music.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
