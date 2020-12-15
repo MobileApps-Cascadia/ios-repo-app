@@ -9,10 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var firstName: UITextField!
-    @IBOutlet weak var lastName: UITextField!
-    @IBOutlet weak var phoneNumber: UITextField!
-    @IBOutlet weak var sid: UITextField!
+    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var music_url: UITextField!
+    @IBOutlet weak var descriptions: UITextField!
+    @IBOutlet weak var id: UITextField!
     
     @IBOutlet weak var resultInfo: UILabel!
     override func viewDidLoad() {
@@ -21,21 +21,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func saveToAPI(_ sender: Any) {
-        //TODO: create a Repository object needed to invoke the API's create method at http://216.186.69.45/services/device/users/
-        let userRepo = 
+        //TODO: create a Repository object needed to invoke the API's create method at //"https://www.orangevalleycaa.org/api/music/"
+        let userRepo = Repository<Music>(withPath: "https://www.orangevalleycaa.org/api/music")
         
-        let newUser = User()
-        newUser.FirstName = firstName.text
-        newUser.LastName = lastName.text
-        newUser.PhoneNumber = phoneNumber.text
-        newUser.SID = sid.text
+        let newMusic = Music()
+        newMusic.name = name.text
+        newMusic.music_url = music_url.text
+        newMusic.description = descriptions.text
+        newMusic.id = 8 //id.text
         
-        userRepo.create(a: newUser)  { (user) in
-            if let id = user?.UserID, let first = user?.FirstName, let last = user?.LastName {
-                self.resultInfo.text = "Successfully create user \(first) \(last) with id \(id)"
-            }
-        }
+        userRepo.create(a: newMusic)
     }
-    
 }
-
+    

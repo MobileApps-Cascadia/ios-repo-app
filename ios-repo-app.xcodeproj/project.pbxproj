@@ -13,7 +13,7 @@
 		D12B604023496A6D00D612C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D12B603F23496A6D00D612C7 /* Assets.xcassets */; };
 		D12B604323496A6D00D612C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D12B604123496A6D00D612C7 /* LaunchScreen.storyboard */; };
 		D12B604B23496AC000D612C7 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12B604A23496AC000D612C7 /* Repository.swift */; };
-		D12B604D23496B4300D612C7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12B604C23496B4300D612C7 /* User.swift */; };
+		D12B604D23496B4300D612C7 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12B604C23496B4300D612C7 /* Music.swift */; };
 		D12B604F23496BF300D612C7 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12B604E23496BF300D612C7 /* Device.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,7 @@
 		D12B604223496A6D00D612C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D12B604423496A6D00D612C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D12B604A23496AC000D612C7 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		D12B604C23496B4300D612C7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D12B604C23496B4300D612C7 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		D12B604E23496BF300D612C7 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,7 +75,7 @@
 		D12B605023496C1000D612C7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D12B604C23496B4300D612C7 /* User.swift */,
+				D12B604C23496B4300D612C7 /* Music.swift */,
 				D12B604E23496BF300D612C7 /* Device.swift */,
 			);
 			path = Model;
@@ -152,7 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D12B604D23496B4300D612C7 /* User.swift in Sources */,
+				D12B604D23496B4300D612C7 /* Music.swift in Sources */,
 				D12B604B23496AC000D612C7 /* Repository.swift in Sources */,
 				D12B603B23496A6B00D612C7 /* ViewController.swift in Sources */,
 				D12B604F23496BF300D612C7 /* Device.swift in Sources */,
